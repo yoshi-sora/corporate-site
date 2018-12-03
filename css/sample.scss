@@ -449,7 +449,7 @@ h1{
     padding: 0;
 }
 
-/* news.html　company.html
+/* news.html company.html
 ------------------------------------------------------------*/
 #sub_cover {
    background-image: url(../images/news/sub_cover.jpg);
@@ -481,6 +481,13 @@ h1{
 #contents {
     padding-top: 20px;
     
+    //ここから#contents @media (min-width: 550px)
+    @media (min-width: 550px){
+      padding-top: 35px;
+          padding-bottom: 70px;
+    }
+    //ここまで#contents @media (min-width: 550px)
+    
     #main {
         
         h2 {
@@ -506,7 +513,11 @@ h1{
             } //li
         } //.news_li
         
+        //ここから#main min-width 550px
         @media (min-width: 550px){
+          
+          padding-right: 20px;
+          
         .news_li li{
             list-style: none;
             padding-bottom: 5px;
@@ -518,24 +529,21 @@ h1{
             }
          } 
          
-        } //min-width 550px
+        } //ここまで#main min-width 550px
         
-        //ここからcompany.htmlのみ適応------------------------
+        //ここからcompany.htmlのみ適応-------------------------------
         
-        
-        h2 {
-               .company_title{
-                 margin-bottom: 0px;
-               }
+         h2.company_title {
+               margin-bottom: 0px;
         }
         
-        th {
-          padding-right: 20px;
-        }
         th,td {
-          padding: 20px 0;
+           padding: 20px 0;
           color: #626262;
           @include fontsize(14);
+        }
+        th {
+          padding-right: 20px;
         }
         //ここから @media (min-width: 550px)
         @media (min-width: 550px) {
@@ -544,7 +552,8 @@ h1{
             padding-bottom: 20px;
           }
         }
-         
+        //ここまで @media (min-width: 550px)
+        
     }
     //#mainここまで
     
